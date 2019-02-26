@@ -14,8 +14,8 @@ CRASH = "Is that a deer?"
 def main():
     should_we_pull_over = False
     questions_asked = 0
-    QUESTION_LIMIT = 5
-    while not questions_asked >= QUESTION_LIMIT:
+    QUESTION_LIMIT = 5  # don't do this! Why? it's a constant
+    while not should_we_pull_over:
         what_the_parent_said = input("Are we there yet?")
         questions_asked += 1
         if questions_asked >= QUESTION_LIMIT:
