@@ -2,7 +2,7 @@ def main():
     doc_js_favorite_birds = ["kingfisher", "peregrine", "common swift", "frogmouth"]
     your_favorite_birds = doc_js_favorite_birds
 
-    print("Oh hey, I love starlings")
+    print("Oh hey, I love starlings.")
     your_favorite_birds.append("starlings")
 
     print("Doc J, do you like starlings")
