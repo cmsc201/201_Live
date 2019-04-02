@@ -1,9 +1,10 @@
-def increment_list(a):
+def increment_list(some_list):
+    copy = some_list[:]
     index = 0
-    while index < len(a):
-        a[index] += 1
+    while index < len(copy):
+        copy[index] += 1
         index += 1
-    return a
+    return copy
 
 # mutable function parameter example
 def main():
