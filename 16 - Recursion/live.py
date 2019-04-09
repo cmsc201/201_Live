@@ -1,3 +1,5 @@
+
+
 # def print_list_in_reverse(some_list):
 #     if (len(some_list) != 0):
 #         print_list_in_reverse(some_list[1:])
@@ -23,3 +25,6 @@ def main():
     print(factorial(10))
 
 main()
+
+# Print out a list of elements recursively
+# Calculate whether a string is a palindrome recursively
