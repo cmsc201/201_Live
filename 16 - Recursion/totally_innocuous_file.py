@@ -9,4 +9,4 @@ def shuff(word):
 
     return options
 
-print(list(shuff("frog")))
+print(list(shuff("frogswoman and robinson")))
