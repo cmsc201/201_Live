@@ -49,17 +49,46 @@
 
 
 # Sum the elements of a list recursively
-def sum(a_list):
-    # base case
-    if len(a_list) == 1:
-        return a_list[0]
-    # recursion
-    return a_list[0] + sum(a_list[1:]) # add the first number, to the sum of the rest of the list
+# def sum(a_list):
+#     # base case
+#     if len(a_list) == 1:
+#         return a_list[0]
+#     # recursion
+#     return a_list[0] + sum(a_list[1:]) # add the first number, to the sum of the rest of the list
+#
+# def main():
+#     print(sum([1, 2, 3, 4]))
 
-def main():
-    print(sum([1, 2, 3, 4]))
+# main()
 
-main()
 # For two integers, x and y, compute x^y recursively.
+def power(x, y):
+    # ???
+    # if base_case:
+    #     return some_thing_easy
+    # return my part + power(smaller subproblem)
+    if y == 0:
+        return 1
+    return power(x, y - 1) * x
+
+print(power(2, 3))
+print(power(3, 3))
+
 # Print out a list of elements recursively
+# done!
 # Calculate whether a string is a palindrome recursively
+
+def canPay(amount, coins):
+    if amount == 0:
+        return True
+    if len(coins) == 0:
+        return False
+    for i in range(len(coins)):
+        coin = coins[i]
+        smallerCoins = coins[:i] + coins[i+1:]
+        if canPay(amount - coin, smallerCoins):
+            return True
+    return False
+
+print(canPay(100, [25, 25, 25, 5, 5, 5, 5]))
+print(canPay(50, [5, 10]))
