@@ -90,5 +90,5 @@ def canPay(amount, coins):
             return True
     return False
 
-print(canPay(100, [25, 25, 25, 5, 5, 5, 5]))
+print(canPay(104, [25, 25, 1, 1, 1, 1, 1, 25, 5, 5, 5, 5, 5]))
 print(canPay(50, [5, 10]))
