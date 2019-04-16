@@ -88,7 +88,8 @@ def sum_list(theList):
 
 print(sum_list([4, 5, 6, 7]))
 
-# Print out a list of elements recursively
+
+# given a cost and a list of coin values, determine whether you can make perfect change
 
 
 # Calculate whether a string is a palindrome recursively
