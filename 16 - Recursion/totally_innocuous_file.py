@@ -12,3 +12,5 @@ def permute(word):
     return options
 
 print(list(permute("frog")))
+
+f = open
