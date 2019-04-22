@@ -78,18 +78,46 @@
 #     else:
 #         return some small part + my clones work on the remaining subproblem
 
-def sum_list(theList):
+# def sum_list(theList):
+#
+#     if len(theList) == 0:
+#         return 0
+#     else:
+#         import pdb; pdb.set_trace()
+#         return theList[0] + sum_list(theList[1:])
+#
+# print(sum_list([4, 5, 6, 7]))
 
-    if len(theList) == 0:
-        return 0
-    else:
-        import pdb; pdb.set_trace()
-        return theList[0] + sum_list(theList[1:])
 
-print(sum_list([4, 5, 6, 7]))
+# implement power(x, y) which returns x ** y but do it recursively
+def power(x, y):
+    # if base_case:
+    #     return simple_answer
+    # return my_part + power(a smaller problem without my part)
+    if y == 0:
+        return 1
+    return power(x, y - 1) * x
+
+print(power(2, 3)) # 8
+print(power(12, 2)) # 144
+print(power(100, 0)) # 1
 
 
 # given a cost and a list of coin values, determine whether you can make perfect change
+def canMakeChange(price, coins):
+    # if base_case:
+    #     return simple answer
+    # return recursive_call + my_subproblem
+    if price == 0:
+        return True # yeah!
+    if len(coins) == 0:
+        return False
+    for i in range(len(coins)):
+        smaller_bag = coins[:i] + coins[i+1:]
+        new_cost = price - coins[i]
+        if new_cost > 0 and canMakeChange(new_cost, smaller_bag):
+            return True
+    return False
 
-
+print(canMakeChange(100, [1, 1, 1, 25, 19, 18, 34]))
 # Calculate whether a string is a palindrome recursively
