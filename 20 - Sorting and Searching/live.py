@@ -52,6 +52,24 @@ def selectsort(the_list):
     print(compares, "comparisons done for select sort.")
     return the_list
 
+def linear_search(a_list, to_find):
+    # do search
+    return -1
+
+
+def binary_search_actual(sorted, to_find, compare_list):
+    # do search
+    return -1
+
+
+def binary_search(sorted, to_find):
+    count_list = []
+    output = binary_search_actual(sorted, to_find, count_list)
+    sum = 0
+    for i in range(len(count_list)):
+        sum += count_list[i]
+    print(sum, "comparisons done for binary search.")
+    return output
 
 def main():
     some_list = [3, 54, 6, 7, 90, 21]
@@ -66,13 +84,20 @@ def main():
     SOME_LARGE_NUMBER = 10000
     for i in range(SOME_LARGE_NUMBER):
         some_list.append(random.randint(0, 1000000))
-    print("With a list of", SOME_LARGE_NUMBER, "values:")
+
+    print("\nWith a list of", SOME_LARGE_NUMBER, "values:")
+
     copy = list(some_list)
     bubblesort(copy)
     copy = list(some_list)
     selectsort(copy)
     copy = list(some_list)
-    quick_sort_with_count(copy)
+    sorted = quick_sort_with_count(copy)
+
+    print("\nSearching!")
+    print(linear_search(sorted, 82))
+
+    print(binary_search(sorted, 82))
 
 
 main()

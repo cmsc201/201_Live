@@ -89,6 +89,41 @@ def selectsort(the_list):
     return the_list
 
 
+def linear_search(a_list, to_find):
+    compares = 0
+    for i in range(len(a_list)):
+        compares += 1
+        if a_list[i] == to_find:
+            print(compares, "comparisons for linear search")
+            return i
+    print(compares, "comparisons for linear search")
+    return -1
+
+
+def binary_search_actual(sorted, to_find, compare_list):
+    if len(sorted) == 0:
+        return False
+    middle_index = len(sorted) // 2
+    middle = sorted[middle_index]
+    compare_list.append(1)
+    if middle == to_find:
+        return True
+    if to_find < middle:
+        return binary_search_actual(sorted[:middle_index], to_find, compare_list)
+    else:
+        return binary_search_actual(sorted[middle_index + 1:], to_find, compare_list)
+
+
+def binary_search(sorted, to_find):
+    count_list = []
+    output = binary_search_actual(sorted, to_find, count_list)
+    sum = 0
+    for i in range(len(count_list)):
+        sum += count_list[i]
+    print(sum, "comparisons done for binary search.")
+    return output
+
+
 def main():
     some_list = [3, 54, 6, 7, 90, 21]
     copy = list(some_list)
@@ -102,13 +137,20 @@ def main():
     SOME_LARGE_NUMBER = 10000
     for i in range(SOME_LARGE_NUMBER):
         some_list.append(random.randint(0, 1000000))
-    print("With a list of", SOME_LARGE_NUMBER, "values:")
+
+    print("\nWith a list of", SOME_LARGE_NUMBER, "values:")
+
     copy = list(some_list)
     bubblesort(copy)
     copy = list(some_list)
     selectsort(copy)
     copy = list(some_list)
-    quick_sort_with_count(copy)
+
+    sorted = quick_sort_with_count(copy)
+    print("\nSearching!")
+    print(linear_search(sorted, 82))
+
+    print(binary_search(sorted, 82))
 
 
 main()
