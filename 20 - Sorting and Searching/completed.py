@@ -44,6 +44,7 @@ def quicksort(the_list, count_list):
             smaller.append(the_list[i])
         else:
             bigger.append(the_list[i])
+    # combine lists
     output = quicksort(smaller, count_list)
     output.append(toCompare)
     output.extend(quicksort(bigger, count_list))
@@ -145,8 +146,8 @@ def main():
     copy = list(some_list)
     selectsort(copy)
     copy = list(some_list)
-
     sorted = quick_sort_with_count(copy)
+
     print("\nSearching!")
     print(linear_search(sorted, 82))
 
