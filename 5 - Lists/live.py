@@ -41,5 +41,3 @@ if __name__ == '__main__':
     else:
         print("I don't have that on the list.")
 
-    # A user inputs a series of numbers and then we print the list of numbers with their average
-
