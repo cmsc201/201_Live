@@ -77,16 +77,16 @@ if __name__ == '__main__':
     # what is my name? simba
     #  what?  no.  get out of here
 
-    name = input("Hey.  Hey.  You know who I am?")
-    times_name_said = 0
-    while name == "beetlejuice" and times_name_said < 2:
-        times_name_said += 1
-        name = input("I said, DO YOU KNOW WHO I AM?") # goes infinite
-
-    if times_name_said == 2:
-        print("I'M ALREADY HERE!")
-    else:
-        print("What?  Who?  Get outta here!")
+    # name = input("Hey.  Hey.  You know who I am?")
+    # times_name_said = 0
+    # while name == "beetlejuice" and times_name_said < 2:
+    #     times_name_said += 1
+    #     name = input("I said, DO YOU KNOW WHO I AM?") # goes infinite
+    #
+    # if times_name_said == 2:
+    #     print("I'M ALREADY HERE!")
+    # else:
+    #     print("What?  Who?  Get outta here!")
 
 # Add numbers until the user puts in 0.
 # Compute 10!
