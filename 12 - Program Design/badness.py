@@ -13,6 +13,7 @@ def get_value_in_range(prompt, minimum, maximum):
 
 
 if __name__ == '__main__':
+    # get the age and the credit amount for the user
 
     age = get_value_in_range("What is your age?", 0, 150)
 
