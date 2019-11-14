@@ -66,3 +66,19 @@ if __name__ == '__main__':
 #
 #     print(fib(5))
 #     print(fib4(5))
+
+
+# palindrome!
+
+def is_palin(word):
+    if len(word) < 2:
+        return True
+    if word[0] == word[len(word) - 1]:
+        return is_palin(word[1:-1])
+    else:
+        return False
+
+if __name__ == '__main__':
+    print(is_palin("aabc"))
+    print(is_palin("abba"))
+    print(is_palin(""))
