@@ -101,23 +101,22 @@ def linear_search(a_list, to_find):
     return -1
 
 
-def binary_search_actual(sorted, to_find, compare_list):
+def binary(sorted, to_find):
     if len(sorted) == 0:
         return False
-    middle_index = len(sorted) // 2
-    middle = sorted[middle_index]
-    compare_list.append(1)
+    mid_index = len(sorted) // 2
+    middle = sorted[mid_index]
     if middle == to_find:
         return True
     if to_find < middle:
-        return binary_search_actual(sorted[:middle_index], to_find, compare_list)
+        return binary(sorted[:mid_index], to_find)
     else:
-        return binary_search_actual(sorted[middle_index + 1:], to_find, compare_list)
+        return binary(sorted[mid_index + 1:], to_find)
 
 
 def binary_search(sorted, to_find):
     count_list = []
-    output = binary_search_actual(sorted, to_find, count_list)
+    output = binary(sorted, to_find, count_list)
     sum = 0
     for i in range(len(count_list)):
         sum += count_list[i]
