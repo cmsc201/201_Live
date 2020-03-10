@@ -11,3 +11,24 @@
 
 # Write a function that asks the user for their age until they give something between 0 and 150.  Wait.  Can we do this?
 
+
+def get_user_name_and_greet():
+    name = input("What is your name?")
+    print_greeting(name)
+
+
+def print_greeting(name):
+    print("Hello!", name)
+
+
+def add(x, y):
+    print(x, "+", y, "=", x + y)
+
+
+if __name__ == '__main__':
+    # x = 1
+    # y = 2
+    # add(x, y)
+    # # get_user_name_and_greet()
+    # # print("Goodbye!")
+    add(3, 3)
