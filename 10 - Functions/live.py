@@ -22,7 +22,9 @@ def print_greeting(name):
 
 
 def add(x, y):
-    print(x, "+", y, "=", x + y)
+    
+    result = x + y
+    return result
 
 
 if __name__ == '__main__':
@@ -31,4 +33,7 @@ if __name__ == '__main__':
     # add(x, y)
     # # get_user_name_and_greet()
     # # print("Goodbye!")
-    add(3, 3)
+    first = int(input("num1"))
+    second = int(input("num2"))
+    print(first, "+", second, "is", add(first, second))
+
