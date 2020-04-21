@@ -1,5 +1,7 @@
 class Dog:
-    def __init__(self, name, age, color, weight, breed, fluffiness):
+    def __init__(self, name, age=0, color="Default",
+                 weight=0, breed="Mutt", fluffiness=0.6,
+                 times_barked=0):
         self.name = name
         self.age = age
         self.color = color
@@ -8,7 +10,7 @@ class Dog:
         self.fluffiness = fluffiness
         self.cuteness = 0.5
         self.things_eaten = []
-        self.times_barked = 0
+        self.times_barked = times_barked
 
     def bark(self):
         self.times_barked += 1
@@ -49,6 +51,11 @@ if __name__ == '__main__':
 
     spot = Dog("Spot", 9.0, "white/black", 9.0, "doggo", 0.1)
     spot.bark()
+
+    governor = Dog("Governor", 5)
+    print(governor.age)
+    jeff = Dog("Jeff")
+
 
     fang_squad = Pack("Fang squad")
     print(fang_squad.join)
